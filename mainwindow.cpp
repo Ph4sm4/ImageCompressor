@@ -74,6 +74,15 @@ void MainWindow::ChrominanceDownsampling(int *blueChrom, int *redChrom, int widt
 
 void MainWindow::DiscreteCosineTransform(int* lum, int* blueChrom, int* redChrom, int width, int height)
 {
+    dctMatrix = new float [width * height];
+    for(int i = 0; i < width; i++) {
+        for(int j = 0; j < height; j++) {
+            if(i == 0) {
+
+            }
+        }
+    } // create the dct matrix first
+
     for(int i = 0; i < width; i += 8) {
         for(int j = 0; j < height; j += 8) {
             lum[i * height + j] -= 128;

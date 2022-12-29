@@ -7,6 +7,12 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+/* https://fairyonice.github.io/2D-DCT.html -> dct matrix equation
+ * https://web.archive.org/web/20180421030430/http://www.equasys.de/colorconversion.html -> YCbCr/Rgb format equations
+ * https://www.youtube.com/watch?v=CAn-FzQkGTA -> dct matrix equation video
+ *
+ */
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -35,6 +41,8 @@ private:
     int* Luminance;
     int* BlueChrominance;
     int* RedChrominance;
+
+    float* dctMatrix;
 
     QImage* currentImage = nullptr;
 };
